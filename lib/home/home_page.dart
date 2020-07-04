@@ -30,14 +30,13 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.only(top: 42),
+        padding: EdgeInsets.only(top: 42, left: 24),
         child: Column(
           children: <Widget>[
             Row(
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.only(
-                    left: 24,
                     right: 24,
                   ),
                   child: Text(
@@ -77,7 +76,13 @@ class _HomePageState extends State<HomePage> {
                         backgroundColor: index == _selectIndex
                             ? Colors.blue
                             : Colors.grey[200],
-                        label: Text(categorias.elementAt(index)),
+                        label: Text(
+                          categorias.elementAt(index),
+                          style: TextStyle(
+                              color: index == _selectIndex
+                                  ? Colors.white
+                                  : Colors.black),
+                        ),
                       ),
                     ),
                   );
