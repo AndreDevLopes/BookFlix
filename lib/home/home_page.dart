@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   List<String> categorias = [
     "Android",
     "Java",
@@ -9,6 +14,7 @@ class HomePage extends StatelessWidget {
     "Myths",
     "Typhography"
   ];
+  int _selectIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -48,11 +54,20 @@ class HomePage extends StatelessWidget {
                 itemBuilder: (BuildContext c, int index) {
                   return Padding(
                     padding: const EdgeInsets.only(
-                      left: 8,
-                      right: 8,
+                      left: 6,
+                      right: 6,
                     ),
-                    child: Chip(
-                      label: Text(categorias.elementAt(index)),
+                    child: GestureDetector(
+                      onTap: () {
+                        _selectIndex = index;
+                        setState(() {});
+                      },
+                      child: Chip(
+                        backgroundColor: index == _selectIndex
+                            ? Colors.blue
+                            : Colors.grey[200],
+                        label: Text(categorias.elementAt(index)),
+                      ),
                     ),
                   );
                 },
