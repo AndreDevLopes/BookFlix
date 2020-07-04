@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  List<String> categorias = ["Android", "Java", "História", "Ciências"];
+  List<String> categorias = [
+    "Android",
+    "Java",
+    "História",
+    "Ciências",
+    "Myths",
+    "Typhography"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +39,22 @@ class HomePage extends StatelessWidget {
               ],
             ),
             Container(
-              height: 200,
+              height: 50,
+              width: MediaQuery.of(context).size.width,
               child: ListView.builder(
                 shrinkWrap: true,
                 itemCount: categorias.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (BuildContext c, int index) {
-                  return Chip(label: Text(categorias.elementAt(index)));
+                  return Padding(
+                    padding: const EdgeInsets.only(
+                      left: 8,
+                      right: 8,
+                    ),
+                    child: Chip(
+                      label: Text(categorias.elementAt(index)),
+                    ),
+                  );
                 },
               ),
             )
