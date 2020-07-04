@@ -42,12 +42,18 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     "Browse",
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 26,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-                Text("Recommended"),
+                Text(
+                  "Recommended",
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[400]),
+                ),
               ],
             ),
             Container(
@@ -81,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                           style: TextStyle(
                               color: index == _selectIndex
                                   ? Colors.white
-                                  : Colors.black),
+                                  : Colors.grey[700]),
                         ),
                       ),
                     ),
