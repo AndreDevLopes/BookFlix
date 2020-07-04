@@ -63,6 +63,10 @@ class _HomePageState extends State<HomePage> {
                         setState(() {});
                       },
                       child: Chip(
+                        padding: EdgeInsets.only(
+                          left: 8,
+                          right: 8,
+                        ),
                         backgroundColor: index == _selectIndex
                             ? Colors.blue
                             : Colors.grey[200],
