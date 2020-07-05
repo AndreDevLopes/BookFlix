@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import './book_widget.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -15,6 +16,7 @@ class _HomePageState extends State<HomePage> {
     "Myths",
     "Typhography"
   ];
+
   int _selectIndex = 0;
 
   @override
@@ -94,7 +96,14 @@ class _HomePageState extends State<HomePage> {
                   );
                 },
               ),
-            )
+            ),
+            ListView.builder(
+              itemCount: categorias.length,
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return BookWidget();
+              },
+            ),
           ],
         ),
       ),
