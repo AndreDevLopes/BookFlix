@@ -30,6 +30,25 @@ class BookWidget extends StatelessWidget {
                     ),
                   ],
                 ),
+                child: Column(
+                  children: <Widget>[
+                    Text(
+                      "BOOK Title",
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "Book Author",
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.grey,
+                    )
+                  ],
+                ),
               ),
             ),
           ],
