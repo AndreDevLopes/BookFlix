@@ -18,9 +18,18 @@ class BookWidget extends StatelessWidget {
             Align(
               alignment: Alignment.centerLeft,
               child: Container(
-                width: 220,
-                height: 180,
-                color: Colors.white,
+                width: 230,
+                height: 200,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(16)),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 15,
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
