@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
+      body: Padding(
         padding: EdgeInsets.only(top: 42, left: 24),
         child: Column(
           children: <Widget>[
@@ -95,12 +95,15 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-            ListView.builder(
-              itemCount: categorias.length,
-              shrinkWrap: true,
-              itemBuilder: (context, index) {
-                return BookWidget();
-              },
+            Expanded(
+              child: Container(
+                child: ListView.builder(
+                  itemCount: categorias.length,
+                  itemBuilder: (context, index) {
+                    return BookWidget();
+                  },
+                ),
+              ),
             ),
           ],
         ),
