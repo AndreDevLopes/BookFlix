@@ -12,7 +12,17 @@ class BookWidget extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Align(
-                alignment: Alignment.centerRight, child: Image.network(imgUrl)),
+              alignment: Alignment.centerRight,
+              child: Image.network(imgUrl),
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                width: 220,
+                height: 180,
+                color: Colors.white,
+              ),
+            ),
           ],
         ));
   }
