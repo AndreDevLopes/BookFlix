@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './book_widget.dart';
+import '../widgets/book_widget.dart';
 
 class HomePage extends StatefulWidget {
   @override
