@@ -6,17 +6,20 @@ class BookWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 240,
+        height: 250,
         width: 200,
-        margin: EdgeInsets.fromLTRB(24, 12, 24, 12),
+        margin: EdgeInsets.fromLTRB(16, 12, 16, 12),
         child: Stack(
           children: <Widget>[
             Align(
               alignment: Alignment.centerRight,
-              child: Image.network(
-                imgUrl,
-                width: 200,
-                fit: BoxFit.fill,
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(12)),
+                child: Image.network(
+                  imgUrl,
+                  width: 200,
+                  fit: BoxFit.fill,
+                ),
               ),
             ),
             Align(

@@ -29,9 +29,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+      body: SingleChildScrollView(
         padding: EdgeInsets.only(top: 42, left: 24),
         child: Column(
           children: <Widget>[
@@ -44,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     "Browse",
                     style: TextStyle(
-                      fontSize: 26,
+                      fontSize: 32,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -52,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   "Recommended",
                   style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Colors.grey[400]),
                 ),
