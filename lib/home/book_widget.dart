@@ -13,13 +13,18 @@ class BookWidget extends StatelessWidget {
           children: <Widget>[
             Align(
               alignment: Alignment.centerRight,
-              child: Image.network(imgUrl),
+              child: Image.network(
+                imgUrl,
+                width: 200,
+                fit: BoxFit.fill,
+              ),
             ),
             Align(
               alignment: Alignment.centerLeft,
               child: Container(
-                width: 230,
+                width: 220,
                 height: 200,
+                padding: EdgeInsets.all(24),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(16)),
@@ -31,6 +36,8 @@ class BookWidget extends StatelessWidget {
                   ],
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     Text(
                       "BOOK Title",
@@ -43,10 +50,13 @@ class BookWidget extends StatelessWidget {
                         color: Colors.grey,
                       ),
                     ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: Colors.grey,
-                    )
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.grey,
+                      ),
+                    ),
                   ],
                 ),
               ),
