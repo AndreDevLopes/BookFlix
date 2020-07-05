@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black54,
       body: Padding(
         padding: EdgeInsets.only(top: 42, left: 24),
         child: Column(
@@ -40,11 +40,11 @@ class _HomePageState extends State<HomePage> {
                     right: 24,
                   ),
                   child: Text(
-                    "Browse",
+                    "BookFlix",
                     style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-                    ),
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
                   ),
                 ),
                 Text(
@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                           right: 8,
                         ),
                         backgroundColor: index == _selectIndex
-                            ? Colors.blue
+                            ? Colors.redAccent
                             : Colors.grey[200],
                         label: Text(
                           categorias.elementAt(index),

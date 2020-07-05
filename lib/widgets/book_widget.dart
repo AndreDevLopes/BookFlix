@@ -29,7 +29,7 @@ class BookWidget extends StatelessWidget {
                 height: 200,
                 padding: EdgeInsets.all(24),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.grey[300],
                   borderRadius: BorderRadius.all(Radius.circular(16)),
                   boxShadow: [
                     BoxShadow(
